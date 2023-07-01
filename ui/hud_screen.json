@@ -1,0 +1,77 @@
+{
+  // <- -x +x ->  ^ -y +y v
+  "namespace": "hud",
+  "hud_title_text": {
+    "alpha": 1,
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "sidebar": {
+          "type": "panel",
+          "controls": [
+            {
+              "title_text": {
+                "type": "image",
+                "offset": [-5, 0],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "size": ["100%c + 10px", "100%c + 10px"],
+                "texture": "textures/ui/right_background",
+                "controls": [
+                  {
+                    "text": {
+                      "type": "label",
+                      "text_alignment": "left",
+                      "text": "$title_text",
+                      "font_scale_factor": 1,
+                      "layer": 1
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "logo_image": {
+                "type": "image",
+                "size": [100, 100],
+                "offset": [-17, -40],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "texture": "textures/ui/logo"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hud_actionbar_text": {
+    "alpha": 0,
+    "size": ["100%", "100%"],
+    "offset": [0,0],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text_alignment": "center",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "$actionbar_text",
+          "font_type": "smooth",
+          "font_scale_factor": 1.2,
+          "layer": 1,
+          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        }
+      }
+    ]
+  },
+  "anim_actionbar_text_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 3,
+    "from": 1.0,
+    "to": 0,
+    "destroy_at_end": "hud_actionbar_text"
+  }
+}
+
