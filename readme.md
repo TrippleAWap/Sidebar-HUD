@@ -1,7 +1,9 @@
-This is my first JSON UI pack! It's a simple but useful pack, unlike other pack this one removes all the unused stuff and only has the required changes to the ui!
+aThis is my first JSON UI pack! It's a simple but useful pack, unlike other pack this one removes all the unused stuff and only has the required changes to the ui!
 
 **IMPORTANT**
+
   Actionbar -> Top
+
   Title -> Sidebar
 
 **Author .trippleawap**
