@@ -34,7 +34,7 @@
               "logo_image": {
                 "type": "image",
                 "size": [100, 100],
-                "offset": [-17, -40],
+                "offset": [-17, -40], // change this to move the logo
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "texture": "textures/ui/logo"
@@ -46,26 +46,35 @@
     ]
   },
   "hud_actionbar_text": {
-    "alpha": 0,
-    "size": ["100%", "100%"],
-    "offset": [0,0],
+    "type": "panel",
+    "offset": [0, 0],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
     "controls": [
       {
-        "text": {
-          "type": "label",
-          "text_alignment": "center",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "text": "$actionbar_text",
-          "font_type": "smooth",
-          "font_scale_factor": 1.2,
-          "layer": 1,
-          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        "image": {
+          "type": "image",
+          "size": ["100%c + 10px", "100%c + 10px"],
+          "alpha": "@hud.anim_alpha_out", // make this 0 to hide background
+          "texture": "textures/ui/actionbar_background",
+          "controls": [
+            {
+              "text": {
+                "type": "label",
+                "text_alignment": "center",
+                "text": "$actionbar_text",
+                "font_type": "smooth",
+                "font_scale_factor": 1.2,
+                "layer": 1,
+                "alpha": "@hud.anim_alpha_out"
+              }
+            }
+          ]
         }
       }
     ]
   },
-  "anim_actionbar_text_alpha_out": {
+  "anim_alpha_out": {
     "anim_type": "alpha",
     "easing": "in_expo",
     "duration": 3,
