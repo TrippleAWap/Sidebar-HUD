@@ -2,9 +2,8 @@ aThis is my first JSON UI pack! It's a simple but useful pack, unlike other pack
 
 **IMPORTANT**
 
-  Actionbar -> Top
-
-  Title -> Sidebar
+      Actionbar → Top
+      Title → Sidebar
 
 **Author .trippleawap**
 
